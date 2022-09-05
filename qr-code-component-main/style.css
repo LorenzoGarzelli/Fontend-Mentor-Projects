@@ -1,0 +1,56 @@
+:root {
+  font-family: 'Outfit', sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+body {
+  background: #d5e0ef;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 5rem;
+  }
+}
+.container {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0.5px 5px 11px 8px #b4c7e1;
+  padding: 1.5rem;
+  width: 80%;
+  border-radius: 1.8rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.8rem;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 30%;
+  }
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  margin: 0 1.5rem;
+  color: hsl(218, 44%, 22%);
+}
+
+.paragraph {
+  line-height: 0.8rem;
+}
+.paragraph p {
+  margin: 0 auto;
+  color: hsl(220, 15%, 55%);
+}
+
+.qr-img {
+  max-width: 100%;
+  border-radius: 0.8rem;
+}
