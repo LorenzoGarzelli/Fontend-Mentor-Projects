@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <script defer src="script.js"></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+
+
+  <div class="layout-wrapper">
+    <section class="card--intro">
+      <div class="container card--wrapper">
+        <div class="card--back">
+          <img src="./images/bg-card-back.png" alt="" class="card--back__img">
+          <h3 class="card--back_cvc">000</h3>
+        </div>
+
+        <div class="card--front">
+          <img src="./images/bg-card-front.png" alt="" class="card--front__img">
+          <div class="card--front__detail">
+            <div class="detail__logo">
+              <img src="./images/card-logo.svg" alt="">
+            </div>
+            <div class="detail__number">
+              <p>0000 0000 0000 0000</p>
+            </div>
+            <div class="row detail__footer">
+              <p class="detail__name">Jane Appleseed</p>
+              <p class="detail__date">00/00</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="form-section">
+
+      <main class="container">
+        <form class="card-details-form">
+          <div class="input-wrapper">
+            <label for="card-holder">Cardholder Name </label>
+            <input type="text" class="card-holder" placeholder=" e.g. Jane Appleseed">
+            <span class="error-message hidden"></span>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="card-number">Card Number </label>
+            <input type="text" class="card-number" minlength="19" maxlength="19"
+              placeholder=" e.g. 1234 5678 9123 0000">
+            <span class="error-message hidden"></span>
+
+          </div>
+
+          <div class="row">
+            <div class="input-wrapper input-wrapper--small">
+              <label for="card-exp-date">EXP. DATE (MM/YY)</label>
+              <div class="row card-exp-date">
+                <input type="number" class="card-exp-month" min="00" max="12" placeholder=" MM">
+                <input type="number" class="card-exp-year" min="00" max="99" placeholder=" YY">
+              </div>
+              <span class="error-message hidden"></span>
+            </div>
+
+            <div class="input-wrapper input-wrapper--small">
+              <label for="card-cvc">Cvc</label>
+              <input type="number" class="card-cvc" min="000" max="999" placeholder=" e.g. 123">
+              <span class="error-message hidden"></span>
+            </div>
+          </div>
+
+
+          <button class="button button--submit">Confirm</button>
+        </form>
+
+      </main>
+    </section>
+  </div>
+</body>
+
+</html>

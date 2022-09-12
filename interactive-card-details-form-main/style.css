@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+input,
+label {
+  display: block;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card--intro {
+  width: 100%;
+  height: 265px;
+  color: white;
+  /* padding: 2.5em 0em 3em 5em; */
+  background-image: url('./images/bg-main-mobile.png');
+}
+
+.card--wrapper {
+  padding-top: min(15%, 50px);
+  padding-right: 60px;
+  padding-left: min(30%, 70px);
+  /* padding: 15% 3% 2% 20%; */
+}
+
+.card--back {
+  position: relative;
+  width: 290px;
+
+  /* border: 2px solid red; */
+}
+.card--back__img {
+  /* max-width: 90%; */
+  width: 290px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.card--back_cvc {
+  /* border: solid 3px yellow; */
+  font-size: 0.8em;
+  position: absolute;
+  margin: 0;
+  top: 70px;
+  right: 166px;
+  left: 233px;
+}
+
+.card--front {
+  position: relative;
+  height: 154px;
+  left: -47px;
+  top: -73px;
+  width: fit-content;
+  /* border: 2px solid greenyellow; */
+}
+.card--front__img {
+  position: absolute;
+  /* max-width: 68%; */
+  width: 290px;
+  top: 0;
+  left: 0;
+}
+
+.card--front__detail {
+  position: absolute;
+  /* border: 2px solid red; */
+  /* width: 60%; */
+  width: 290px;
+  bottom: 39px;
+  padding: 1em;
+  top: 0;
+  left: 0;
+}
+
+.detail__logo img {
+  max-width: 30%;
+}
+
+.detail__footer {
+  align-items: center;
+}
+.detail__name {
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.detail__number {
+  font-size: 1.4em;
+}
+
+.detail__number p {
+  margin-bottom: 0.3em;
+}
+
+.detail__date {
+  font-size: 0.7em;
+}
+
+.form-section {
+  padding: 5em 1.5em 2em 1.5em;
+}
+.form-section label {
+  text-transform: uppercase;
+  color: hsl(278, 68%, 11%);
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.form-section input {
+  width: 100%;
+  height: 50px;
+  font-size: 1.4em;
+  /* color: hsl(279, 6%, 55%); */
+  border-radius: 10px;
+  border: 1px solid hsla(279, 6%, 55%, 0.211);
+  padding-left: 0.6em;
+}
+
+.form-section input:focus {
+  border-color: hsl(249, 99%, 64%);
+}
+
+.form-section input.invalid {
+  border: 1.5px solid red;
+}
+.error-message {
+  color: red;
+  display: block;
+  font-size: 1em;
+  margin-top: 0.6em;
+}
+
+.form-section input,
+input::placeholder {
+  font-family: 'Space Grotesk', sans-serif;
+}
+input::placeholder {
+  color: hsl(279, 6%, 55%);
+  font-size: 0.9em;
+  opacity: 0.4;
+}
+
+.input-wrapper {
+  margin-bottom: 1.5em;
+}
+.input-wrapper--small {
+  width: 60%;
+  /* justify-content: unset;//TODO Fix flex justification */
+}
+.card-exp-month {
+  width: 30%;
+}
+.card-exp-year {
+  width: 20%;
+}
+
+.card-exp-month,
+.card-exp-year {
+  margin-right: 0.4em;
+}
+
+.button {
+  width: 100%;
+  height: 55px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4em;
+  /* color: hsl(279, 6%, 55%); */
+  border-radius: 10px;
+  border: 1px solid hsla(279, 6%, 55%, 0.211);
+  color: white;
+  padding: 0.4em 0;
+  background: hsl(278, 68%, 11%);
+  transition: opacity 0.4 ease-in-out;
+}
+.button:hover {
+  opacity: 0.9;
+}
+
+/*? Complete Checkout Page  */
+
+.checkout-view > * {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+.checkout-complete-icon {
+  max-width: 100%;
+}
+.checkout-complete-announcement {
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.checkout-view > span {
+  font-size: 1.3em;
+  color: hsl(279, 6%, 55%);
+}
+.button--continue {
+  margin-top: 2em;
+}
+
+@media (min-width: 700px) {
+  .layout-wrapper {
+    display: flex;
+  }
+  .card--intro {
+    min-width: 400px;
+    width: 33%;
+    height: 100vh;
+  }
+
+  .card--front {
+    position: absolute;
+    width: 400px;
+    top: 160px;
+    left: 131px;
+  }
+
+  .card--front__detail {
+    width: 400px;
+    top: 18px;
+    left: 15px;
+    font-size: 1.2em;
+  }
+  .detail__footer {
+    width: 85%;
+  }
+
+  .card--back {
+    position: absolute;
+    width: 400px;
+    top: 410px;
+    left: 201px;
+  }
+  .card--back__img,
+  .card--front__img {
+    width: 400px;
+  }
+  .card--back_cvc {
+    top: 99px;
+    left: 325px;
+  }
+
+  .form-section {
+    width: 100%;
+
+    margin: 0 auto;
+    padding-top: max(15%, 200px);
+    padding-left: max(22%, 250px);
+    padding-right: 22%;
+    /* padding: 15% 25%; */
+  }
+  .card-details-form {
+    min-width: 400px;
+    /* border: 2px solid red; */
+  }
+}
+
+/* @media (max-width: 700px) {
+  .card--intro {
+    display: none;
+    visibility: hidden;
+  }
+} */
