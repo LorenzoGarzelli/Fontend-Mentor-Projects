@@ -49,7 +49,7 @@ function validate(element, rules) {
     ? rules.maxLength
     : [null, null];
 
-  if (!regex?.test(currentInput)) {
+  if (regex && !regex?.test(currentInput)) {
     displayError(element, errorElement, regexErrMessage);
 
     isValid = false;
@@ -143,14 +143,14 @@ cardForm.addEventListener('focusout', event => {
 
 cardForm.addEventListener('submit', event => {
   event.preventDefault();
-  const cardHolder = document.querySelector('card-holder');
-  const cardNumber = document.querySelector('card-number');
-  const cardExpMonth = document.querySelector('card-exp-month');
-  const cardExpYear = document.querySelector('card-exp-year');
-  const cardCvc = document.querySelector('card-cvc');
+  const cardHolder = document.querySelector('.card-holder');
+  const cardNumber = document.querySelector('.card-number');
+  const cardExpMonth = document.querySelector('.card-exp-month');
+  const cardExpYear = document.querySelector('.card-exp-year');
+  const cardCvc = document.querySelector('.card-cvc');
 
   if (
-    validate(cardHolder, cardCvcValidationRules) &&
+    validate(cardHolder, cardHolderValidationRules) &&
     validate(cardNumber, cardNumberValidationRules) &&
     validate(cardExpMonth, cardExpMonthValidationRules) &&
     validate(cardExpYear, cardExpYearValidationRules) &&
@@ -165,5 +165,8 @@ cardForm.addEventListener('submit', event => {
     <button class="button button--continue">Continue</button>
   </div>`;
     mainSection.innerHTML = checkoutCompleteView;
+    document
+      .querySelector('.button--continue')
+      .addEventListener('click', () => location.reload());
   }
 });
