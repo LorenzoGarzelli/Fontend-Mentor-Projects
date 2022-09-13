@@ -91,11 +91,9 @@ const cardForm = document.querySelector('.card-details-form');
 cardNumberInput.addEventListener('keydown', event => {
   const currentInput = event.target.value;
   const characterList = currentInput.split('');
-  console.log(currentInput);
 
   //remove unnecessary space on delete
   if (event.key == 'Backspace') {
-    console.log(characterList);
     if (characterList[characterList.length - 2] == ' ') {
       event.preventDefault();
       characterList.splice(characterList.length - 2, 2);
@@ -119,7 +117,7 @@ cardNumberInput.addEventListener('keydown', event => {
 cardForm.addEventListener('focusout', event => {
   const inputElement = event.target;
   const inputElementClass = event.target.classList[0];
-  console.log(inputElementClass);
+
   switch (inputElementClass) {
     case 'card-holder':
       validate(inputElement, cardHolderValidationRules);

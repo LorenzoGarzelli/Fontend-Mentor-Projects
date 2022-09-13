@@ -269,13 +269,6 @@ input::placeholder {
   }
   .card-details-form {
     min-width: 400px;
-    /* border: 2px solid red; */
+    max-width: 500px;
   }
 }
-
-/* @media (max-width: 700px) {
-  .card--intro {
-    display: none;
-    visibility: hidden;
-  }
-} */
