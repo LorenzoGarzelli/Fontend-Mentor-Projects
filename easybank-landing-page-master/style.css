@@ -1,0 +1,250 @@
+:root {
+  --color-primary--Dark-Blue: hsl(233, 26%, 24%);
+  --color-primary--Lime-Green: hsl(136, 65%, 51%);
+  --color-primary--Bright-Cyan: hsl(192, 70%, 51%);
+
+  --color-neutral--Grayish-Blue: hsl(233, 8%, 62%);
+  --color-neutral--Light-Grayish-Blue: hsl(220, 16%, 96%);
+  --color-neutral--Very-Light-Gray: hsl(0, 0%, 98%);
+  --color-neutral--White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  margin: 0;
+}
+
+header {
+  display: block;
+  padding: 1.6em 0.5em;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--color-neutral--White);
+  /* border: 2px solid greenyellow; */
+}
+.container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--color-neutral--White);
+  background: linear-gradient(
+    45deg,
+    var(--color-primary--Lime-Green),
+    var(--color-primary--Bright-Cyan)
+  );
+  padding: 1em 3em;
+  border-radius: 100px;
+}
+
+/*? Header  */
+.logo__img {
+  max-width: 100%;
+}
+
+.nav-toggle {
+  position: absolute;
+  right: 0px;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  /* border: 1px solid blue; */
+  background-image: url('./images/icon-hamburger.svg');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-neutral--White);
+
+  cursor: pointer;
+  transition: background-image 0.1s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle.active {
+  background-image: url('./images/icon-close.svg');
+}
+
+.nav {
+  /* position: absolute; */
+  /* border: 2px solid red; */
+  border-radius: 5px;
+}
+
+.nav__list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.nav__item {
+  font-family: 'Public Sans', sans-serif;
+}
+.nav__item + .nav__item {
+  margin-top: 1em;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  display: none;
+
+  overflow: auto;
+  padding-top: 70px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal .nav {
+  position: relative;
+  top: 30px;
+  width: 80%;
+  margin: auto;
+  padding: 1em 0;
+  background-color: var(--color-neutral--White);
+}
+
+/*? Intro  */
+.intro {
+  position: relative;
+  background-image: url('./images/bg-intro-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top -36px right 0;
+  background-size: 100%;
+  padding: 5em 0 2em 0;
+  /* max-height: 800px; */
+}
+
+.intro__mockups {
+  max-width: 100%;
+  position: relative;
+  /* top: -165px; */
+  top: -234px;
+
+  z-index: 0;
+}
+
+.intro__content {
+  text-align: center;
+  width: 90%;
+  position: relative;
+  top: -135px;
+  margin-top: 0;
+}
+
+.intro__title {
+  font-size: 3em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.intro__text {
+  color: var(--color-neutral--Grayish-Blue);
+  line-height: 1.8em;
+  margin-bottom: 2em;
+}
+
+/*? Section-Benefits */
+.section-benefits {
+  background-color: var(--color-neutral--Very-Light-Gray);
+  padding: 4em 2em;
+}
+.benefits__intro {
+  text-align: center;
+}
+
+.benefit {
+  text-align: center;
+}
+.benefit__title {
+  font-weight: 300;
+}
+.benefit__description {
+  color: var(--color-neutral--Grayish-Blue);
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+.benefit + .benefit {
+  margin-top: 3em;
+}
+
+/*? Section-Articles */
+.section-articles {
+  /* background-color: var(--color-neutral--Very-Light-Gray); */
+  background-color: var(--color-neutral--White);
+  text-align: center;
+  padding: 5em 2em;
+}
+
+.article {
+  background-color: var(--color-neutral--White);
+  margin: 2em 0;
+  border-radius: 10px;
+}
+.article__picture {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.article__content {
+  padding: 1em;
+  text-align: left;
+}
+
+.article__author {
+  color: var(--color-neutral--Grayish-Blue);
+  font-size: 0.7em;
+}
+
+.article__title {
+  font-weight: 400;
+}
+
+.article__text {
+  color: var(--color-neutral--Grayish-Blue);
+  font-size: 0.95em;
+  line-height: 1.6em;
+}
+
+/*? Footer */
+.footer {
+  background-color: var(--color-primary--Dark-Blue);
+  text-align: center;
+  padding: 3em 0;
+}
+
+.social {
+  margin-top: 2em;
+}
+
+.social__logo {
+  max-width: 100%;
+}
+.social__logo + .social__logo {
+  margin-left: 0.5em;
+}
+
+.links {
+  margin: 2em 0;
+}
+.link {
+  text-decoration: none;
+  display: block;
+  color: var(--color-neutral--Light-Grayish-Blue);
+}
+.link + .link {
+  margin-top: 1em;
+}
+
+.copyright {
+  display: block;
+  margin-top: 2em;
+  color: var(--color-neutral--Grayish-Blue);
+}
