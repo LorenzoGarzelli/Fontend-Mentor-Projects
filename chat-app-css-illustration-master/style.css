@@ -53,7 +53,7 @@ main {
   width: 470px;
   min-height: 955px;
   height: fit-content;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   top: -7rem;
   padding: 1.2em;
   /* border-radius: 2rem; */
