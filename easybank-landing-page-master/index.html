@@ -26,15 +26,17 @@
       <button class="nav-toggle">
 
       </button>
-      <!-- <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav">
+        <ul class="nav__list desktop nav__list--primary">
           <li class="nav__item">Home </li>
           <li class="nav__item">About</li>
           <li class="nav__item">Contact</li>
           <li class="nav__item">Blog</li>
           <li class="nav__item">Careers</li>
         </ul>
-      </nav> -->
+      </nav>
+      <ul class="nav__list desktop nav__list--secondary">
+        <a href="#" class="btn">Request Invite</a>
     </div>
   </header>
 
@@ -52,16 +54,20 @@
     </div>
   </div>
 
+  <img src="./images/image-mockups.png" alt="" class="intro__mockups">
   <section class="intro">
-    <img src="./images/image-mockups.png" alt="" class="intro__mockups">
-    <div class="intro__content container">
-      <h2 class="intro__title">Next generation
-        digital banking</h2>
-      <p class="intro__text">
-        Take your financial life online. Your EasyBank account will be a one-stop-shop for spending, saving, budgeting,
-        investing, and much more.
-      </p>
-      <a href="" class="btn">Request Invite</a>
+
+    <div class="container">
+      <div class="intro__content">
+        <h2 class="intro__title">Next generation
+          digital banking</h2>
+        <p class="intro__text">
+          Take your financial life online. Your EasyBank account will be a one-stop-shop for spending, saving,
+          budgeting,
+          investing, and much more.
+        </p>
+        <a href="#" class="btn">Request Invite</a>
+      </div>
     </div>
   </section>
   <section class="section-benefits">
@@ -139,7 +145,7 @@
           </div>
         </div>
         <div class="article">
-          <img src="/images/image-currency.jpg" alt="" class="article__picture">
+          <img src="/images/image-confetti.jpg" alt="" class="article__picture">
           <div class="article__content">
             <span class="article__author">By Claire Robinson</span>
             <h3 class="article__title">Our invite-only Beta accounts are now live!</h3>
@@ -153,25 +159,35 @@
 
   <section class="footer">
     <div class="container row">
-      <img src="/images/logo--light.svg" alt="" class="logo">
-      <div class="social">
-        <img src="/images/icon-facebook.svg" alt="" class="social__logo">
-        <img src="/images/icon-youtube.svg" alt="" class="social__logo">
-        <img src="/images/icon-twitter.svg" alt="" class="social__logo">
-        <img src="/images/icon-pinterest.svg" alt="" class="social__logo">
-        <img src="/images/icon-instagram.svg" alt="" class="social__logo">
+
+      <div class="col">
+        <img src="/images/logo--light.svg" alt="" class="logo">
+        <div class="social">
+          <img src="/images/icon-facebook.svg" alt="" class="social__logo">
+          <img src="/images/icon-youtube.svg" alt="" class="social__logo">
+          <img src="/images/icon-twitter.svg" alt="" class="social__logo">
+          <img src="/images/icon-pinterest.svg" alt="" class="social__logo">
+          <img src="/images/icon-instagram.svg" alt="" class="social__logo">
+        </div>
       </div>
 
       <div class="links">
-        <a href="" class="link">About Us</a>
-        <a href="" class="link">Contact</a>
-        <a href="" class="link">Blog</a>
-        <a href="" class="link">Careers</a>
-        <a href="" class="link">Support</a>
-        <a href="" class="link">Privacy Policy</a>
+        <div class="col">
+          <a href="#" class="link">About Us</a>
+          <a href="#" class="link">Contact</a>
+          <a href="#" class="link">Blog</a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="link">Careers</a>
+          <a href="#" class="link">Support</a>
+          <a href="#" class="link">Privacy Policy</a>
+        </div>
       </div>
-      <a href="" class="btn">Request Invite</a>
-      <span class="copyright">© Easybank. All Rights Reserved</span>
+      <div class="col">
+        <a href="#" class="btn">Request Invite</a>
+        <span class="copyright">© Easybank. All Rights Reserved</span>
+      </div>
     </div>
   </section>
 
